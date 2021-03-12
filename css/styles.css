@@ -1,0 +1,32 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Josefin", cursive;
+}
+
+h2 {
+    color: #3046c5; 
+}
+
+header h2, h1 {
+    color:rgb(43, 4, 151) ;
+}
+
+
+#newsletter h1 {
+    color: #fff;
+}
+
+
+
+     
+
+      #main-footer {
+        color: #fff;
+      }
+      
+     #showcase {
+         
+     }
