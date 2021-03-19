@@ -15,6 +15,12 @@
        <div class="container">
            <!-- SMALL LOGO IN NAVBAR = NAVBRAND-->
         <a href="#" class="navbar-brand"><img src="./img/logo7.png" alt="logo" height="50" width="50">Neighbor First</a>
+        <!--Reserve Button- And Modal attributes-->
+        <div class="row">
+          <div class=" col-12 my-auto text-center">
+            <a role="button" type="button" data-toggle="modal" data-target="#donationModal" class="btn btn-info">Donate Now</a>
+            </div>
+         </div>
            <!--Toggle Button and Icon-->
            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -36,36 +42,45 @@
                 </li>
                </ul>
            </div>
+           
+           
        </div>
    </nav>
 
 <!--Header-->
-<header id="showcase">
-    <div class="container ">
+<header id="showcase" class="bg-light">
+    <div class="container  ">
         <div class="row">
             <!--LOGO IN HEADER AS A LINK-->
-            <div class="col-3 align-self-center d-none d-sm-block">
+            <div class="col-md-3 align-self-center d-none d-sm-block">
                 <a href="index.html"><img src="./img/logo6.png" alt="logo" class="img-fluid"></a>
             </div>
-            <div class="col-md-6 d-none d-sm-block align-self-center">
+            <div class="col-md-9 d-none d-sm-block align-self-center ">
+              <div class="container">
                 <h1>Neigbor First</h1>
-                <h2>a neighbor 2 neighor donation</h2>
+              </div>
+              <div class="container">
+                <h3 class="text-center">A NEIGBOR  2 NEIGBOR DONATION</h3>
+              </div>
+              <div class="container mt-5">
+                <h3 class="lead">Give your neighbor a chance before you move it to a donation center.</h3>
+              </div>
             </div>
-            <!--Reserve Button- And Modal attributes-->
-            <div class="col mt-4 text-center">
+            <!--Reserve Button- And Modal attributes
+            <div class="col my-2 text-center">
             <a role="button" type="button" data-toggle="modal" data-target="#donationModal" class="btn btn-info">Donate Now</a>
-            </div>
+            </div> -->
         </div>
     </div>
 </header>
 
-    <!--CAROUSEL-->
+    <!--CAROUSEL
 <div class="container pb-3">
-    <!--CAROUSEL-->
+    <!--CAROUSEL--
     <div class="row row-content">
       <div class="col-md-6 mx-auto">
           <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-              <!--INDICATORS-->
+              <!--INDICATORS--
               <ol class="carousel-indicators">
                   <li data-target="#homeCarousel" data-slide-to="0"></li>
                   <li data-target="#homeCarousel" data-slide-to="1"></li>
@@ -78,7 +93,7 @@
                       <img src="./img/don7a.png" alt="Garage" class="d-block w-100">
                   </div>
               </div>
-              <!--CAROUSEL CONTROLS-->
+              <!--CAROUSEL CONTROLS--
               <a href="#homeCarousel" class="carousel-control-prev" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
                   <span class="sr-only">Previous</span>
@@ -90,91 +105,164 @@
           </div>
       </div>
       </div>
-  </div>
+  </div> -->
 
 <!--DONATIONS: SEARCH INPUTS -->
 
 <div class="container pt-3">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 text-center">
       <h2>Search Donations nearby</h2>
     </div>
   </div>
 </div>
-<div id="donations">
-  <div class="container">
-    <div class="row">
-          <div class="input-group mb-3 col-md-6">
-            <input type="text" placeholder="Search" id="search" name="search" class="form-control">
-            <div class="input-group-append">
-              <span type="button" class="input-group-text">
+<div class="container">
+  <div class="row">
+    <!--SEARCH BY DATE-->
+    <div class="input-group col-md-4 my-3">
+        <div class="input-group-prepend ">
+          <span class="input-group-text text-dark"><strong> Date:</strong></span>
+        </div>
+        <input type="date" name="date" id="date" class="form-control">
+        <div class="input-group-append ">
+          <span type ="button" class="input-group-text">
+            <i class="fa fa-search"></i>
+          </span>
+        </div>
+      </div>
+        <!--SEARCH BY PRODUCT-->
+        <div class="input-group  col-md-3 my-3">
+          <input type="text" placeholder="Search product" id="search" name="search" class="form-control">
+          <div class="input-group-append ">
+            <span type="button" class="input-group-text">
+              <i class="fa fa-search"></i>
+            </span>
+          </div>
+        </div>
+        <!--SEARCH BY DISTANCE-->
+        <div class="input-group col-md-5 my-3 ">
+            <div class="input-group-prepend ">
+              <span class="input-group-text text-dark"><strong>Distance:</strong></span>
+            </div>
+            <select class="search-radius" id="search-radius" name="radius">
+              <option value="">Distance</option>
+              <option value="5">5 miles</option>
+              <option value="15">15 miles</option>
+              <option value="25">25 miles</option>
+              <option value="35">35 miles</option>
+              <option value="50">50 miles</option>
+            </select>
+            <div class="input-group-append ">
+              <span type ="button" class="input-group-text">
                 <i class="fa fa-search"></i>
               </span>
             </div>
           </div>
-        </div>
     </div>
-  </div>
+</div>
 
 
   <!--LIST OF DONATIONS-->
     
-  <div class="list-group list">
+  <div class="list-group list mt-2">
     <div href="" class="list-group-item">
-  <div class="row">
-      <div class="col-md-3">
-          <img src="./img/toshiba.jpg" class="pull-left img-fluid">
-          <h4 class="list-group-item-heading name">TV 55' TOSHIBA</h4>
-          <p class="list-group-item-text title">Electronics</p>
-          <a role="button" type="button" class="btn btn-primary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-      </div>
-      <div class="col-md-3">
-          <span class="text-center">Pick Up Info &nbsp;</span>
+      <div class="row">
+        <div class="col-md-2">
+          <img src="./img/toshiba.jpg" class="img-fluid">
+          <h4 class="list-group-item-heading name text-dark" >TV 55' TOSHIBA</h4>
+          <p class="list-group-item-text title text-dark">Electronics</p>
+          <a role="button" type="button" data-toggle="modal" data-target="#product1" class="btn btn-secondary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-md-2">
+          <span class="text-center text-dark">Pick Up Info &nbsp;</span>
           <p class="">
           <span class="btn btn-info d-block pt-2 mb-2">Location: <span>123 Main Street, Worcester MA 1234</span></span>
           <span class="btn btn-info d-block pt-2 mb-2">Time: <span>1:30pm</span> </span>
           <span class="btn btn-info d-block pt-2 mb-2">Condition: <span id="new">New</span> </span>
-      </div>
-      <div class="clearfix"></div>
-      <!--DUPLICATED-->
-      <div class="col-md-3">
-          <img src="./img/toshiba.jpg" class="pull-left img-fluid">
-          <h4 class="list-group-item-heading name">TV 55' TOSHIBA</h4>
-          <p class="list-group-item-text title">Electronics</p>
-          <a role="button" type="button" class="btn btn-primary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-      </div>
-      <div class="col-md-3">
-          <span class="text-center">Pick Up Info &nbsp;</span>
+        </div>
+        <!--DUPLICATED-->
+        <div class="col-md-2">
+          <img src="./img/toshiba.jpg" class="img-fluid">
+          <h4 class="list-group-item-heading name text-dark">TV 55' TOSHIBA</h4>
+          <p class="list-group-item-text title text-dark">Electronics</p>
+          <a role="button" type="button" data-toggle="modal" data-target="#product1" class="btn btn-secondary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-md-2">
+          <span class="text-center text-dark">Pick Up Info &nbsp;</span>
           <p class="">
-          <span class="btn btn-info d-block pt-2 mb-2">Location: <a href="http://maps.google.com/?q=28 Rodney Street, Worcester, MA 01606">28 Rodney St, Worcester MA 01605</a></span></span>
+          <span class="btn btn-info d-block pt-2 mb-2">Location: <span>123 Main Street, Worcester MA 1234</span></span>
           <span class="btn btn-info d-block pt-2 mb-2">Time: <span>1:30pm</span> </span>
-          <span class="btn btn-info d-block pt-2 mb-2">Condition: <span id="working">Working</span> </span>
-          </p>
-      </div>
-  </div>
+          <span class="btn btn-info d-block pt-2 mb-2">Condition: <span id="new">New</span> </span>
+        </div>
+        <div class="col-md-2">
+          <img src="./img/toshiba.jpg" class="img-fluid">
+          <h4 class="list-group-item-heading name text-dark">TV 55' TOSHIBA</h4>
+          <p class="list-group-item-text title text-dark">Electronics</p>
+          <a role="button" type="button" data-toggle="modal" data-target="#product1" class="btn btn-secondary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="col-md-2">
+          <span class="text-center text-dark">Pick Up Info &nbsp;</span>
+          <p class="">
+          <span class="btn btn-info d-block pt-2 mb-2">Location: <span>123 Main Street, Worcester MA 1234</span></span>
+          <span class="btn btn-info d-block pt-2 mb-2">Time: <span>1:30pm</span> </span>
+          <span class="btn btn-info d-block pt-2 mb-2">Condition: <span id="new">New</span> </span>
+        </div>
+      </div> <!--END OF ROW-->
     </div>
-</div>
-<div class="clearfix"></div>
+  </div>
+  <div class="clearfix"></div>
 
-<div class="list-group list">
-<div href="" class="list-group-item">
-<div class="row">
-<div class="col-md-2">
-    <img src="./img/toshiba.jpg" class="pull-left img-fluid">
-    <h4 class="list-group-item-heading name">TV 55' TOSHIBA</h4>
-    <p class="list-group-item-text title">Electronics</p>
-    <a role="button" type="button" class="btn btn-primary">Read More &nbsp; <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
-</div>
-<div class="col-md-2">
-    <span class="text-center">Pick Up Info &nbsp;</span>
-    <p class="">
-    <span class="btn btn-info d-block pt-2 mb-2">Location: <span>123 Main Street, Worcester MA 1234</span></span>
-    <span class="btn btn-info d-block pt-2 mb-2">Time: <span>1:30pm</span> </span>
-    <span class="btn btn-info d-block pt-2 mb-2">Condition: <span id="broken">Broken</span> </span>
-</div>
-</div>
-</div>
-</div>
+<!--MODALS: PRODUCTS MODALS: When you click on read more-->
+<!--Product1 modal-->
+  <div class="modal fade" id="product1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-center">Product Info</h3>
+          <!--Closing icon on the title-->
+          <button role="button" type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body bg-dark text-white">
+          <div class="container">
+              <p class="lead"><li>Display Type
+                LED
+                ResolutionSpecifications Info info
+                4K (2160p)</li>
+                <li>Screen Size ClassSpecifications Info info
+                  55 inches</li>
+                <li>High Dynamic Range (HDR)Specifications Info info
+                  Yes</li>
+                <li>High Dynamic Range FormatSpecifications Info info
+                  Dolby Vision, HDR 10, Hybrid Log-Gamma (HLG)</li>
+                <li>LED Panel Type
+                  Standard LED
+                  Backlight TypeSpecifications Info info</li>
+                <li>Direct Lit
+                  Refresh RateSpecifications Info info
+                  60Hz</li>
+                <li>Specific Manufacturer TechnologiesSpecifications Info info
+                  Fire TV Experience, Dolby Vision HDR, Voice Remove with Alexa
+                  Smart PlatformSpecifications Info info</li>
+                <li> Fire TV
+                  Streaming ServicesSpecifications Info info
+                  Apple TV+, Disney+, Hulu, Netflix, Prime Video, Sling TV, YouTube</li>
+                <li>Number of HDMI Inputs
+                  3
+                  Works WithSpecifications Info info</li>
+                <li>Amazon Alexa
+                  Voice Assistant Built-inSpecifications Info info Amazon Alexa</li>
+                </p>
+          </div>
+          <div class="container row">
+            <button class="btn btn-primary col-md-6 " data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
 
 <!--PAGINATION-->
 <nav class="mt-2">
@@ -227,18 +315,19 @@
   <footer id="main-footer" class="text-center p-4 bg-dark mt-4">
     <div class="container">
       <div class="row">
-        <div class="col text-center">
-          <p>Copyright &copy;
-            <span id="year"></span> Neighbor First</p>
-        </div>
-        <div class="col-6 col-sm-5 text-center">
+        <div class="col-12 text-center">
           <h5>Social</h5>
           <!--Social icons-->
-              <a  href="http://instagram.com/"><i class="fa fa-instagram fa-2x mr-3 text-info "></i></a>
-              <a  href="http://facebook.com/"><i class="fa fa-facebook fa-2x mr-3 text-info"></i></a>
-              <a  href="http://twitter.com/"><i class="fa fa-twitter fa-2x mr-3 text-info"></i></a>
-              <a  href="http://youtube.com/"><i class="fa fa-youtube fa-2x mr-3 text-info"></i></a>
+              <a  href="https://instagram.com/"><i class="fa fa-instagram fa-2x mr-3 text-danger "></i></a>
+              <a  href="https://facebook.com/"><i class="fa fa-facebook fa-2x mr-3 text-primary"></i></a>
+              <a  href="https://twitter.com/"><i class="fa fa-twitter fa-2x mr-3 text-info"></i></a>
+              <a  href="https://youtube.com/"><i class="fa fa-youtube fa-2x mr-3 text-danger"></i></a>
+              <a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp fa-2x mr-3 text-success" aria-hidden="true"></i></a>
       </div>
+      </div>
+      <div class="text-center mt-5">
+        <p>Copyright &copy;
+          <span id="year"></span> Neighbor First</p>
       </div>
     </div>
   </footer>
